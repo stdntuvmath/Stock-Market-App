@@ -56,6 +56,9 @@ namespace Stock_Trading_App
 
         public static async Task Buy_UsingAVGSlopeMethod(string stockListing, int numberOfShares)
         {
+                string logErrorPath = @"C:\Users\" + windowsUserName + @"\Documents\Paper Trader\Errors\" + todaysDate + @"errorLog.txt";
+
+            
             try
             {
                 //ready the getLastTrade web call (DataClient)
@@ -339,39 +342,35 @@ namespace Stock_Trading_App
             }
             catch (WebException ex)
             {
-                string logErrorPath = @"C:\Users\" + windowsUserName + @"\Documents\Paper Trader\Errors\" + todaysDate + @"errorLog.txt";
 
 
                 now = DateTime.Now.TimeOfDay;
-                logFileLine = now + "|" + "Web Exception Error - is thrown when an error occurs while accessing the network through a pluggable protocol." + "\r" + ex.ToString();
+                logFileLine = now + "|" + "Web Exception Error - is thrown when an error occurs while accessing the network through a pluggable protocol." + "\r" + ex.ToString()+ "\r\r\r";
                 File.AppendAllText(logErrorPath, logFileLine);
             }
             catch (HttpListenerException ex)
             {
-                string logErrorPath = @"C:\Users\" + windowsUserName + @"\Documents\Paper Trader\Errors\" + todaysDate + @"errorLog.txt";
 
 
                 now = DateTime.Now.TimeOfDay;
-                logFileLine = now + "|" + "Http Listener Exception - is thrown when an error occurs processing an HTTP request" + "\r" + ex.ToString();
+                logFileLine = now + "|" + "Http Listener Exception - is thrown when an error occurs processing an HTTP request" + "\r" + ex.ToString()+ "\r\r\r";
                 File.AppendAllText(logErrorPath, logFileLine);
             }
             catch (Alpaca.Markets.RestClientErrorException ex)
             {
-                string logErrorPath = @"C:\Users\" + windowsUserName + @"\Documents\Paper Trader\Errors\" + todaysDate + @"errorLog.txt";
 
 
                 now = DateTime.Now.TimeOfDay;
-                logFileLine = now + "|" + "Alpaca.Markets.RestClientErrorException - Represents Alpaca/Polygon Rest API specific error information" + "\r" + ex.ToString();
+                logFileLine = now + "|" + "Alpaca.Markets.RestClientErrorException - Represents Alpaca/Polygon Rest API specific error information" + "\r" + ex.ToString()+ "\r\r\r";
                 File.AppendAllText(logErrorPath, logFileLine);
             }
             catch (Exception ex)
             {
 
-                string logErrorPath = @"C:\Users\" + windowsUserName + @"\Documents\Paper Trader\Errors\" + todaysDate + @"errorLog.txt";
 
 
                 now = DateTime.Now.TimeOfDay;
-                logFileLine = now + "|" + "General Exception - is thrown for errors that occur during application execution. See the Reference Source for more details." + "\r"+ex.ToString();
+                logFileLine = now + "|" + "General Exception - is thrown for errors that occur during application execution. See the Reference Source for more details." + "\r"+ex.ToString()+ "\r\r\r";
                 File.AppendAllText(logErrorPath, logFileLine);
 
 
