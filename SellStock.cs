@@ -15,8 +15,8 @@ namespace Stock_Paper_Trading_App
             var client = new RestClient("https://api.alpaca.markets/v2/positions/");
             client.Timeout = -1;
             var request = new RestRequest(Method.DELETE);
-            request.AddHeader("APCA-API-KEY-ID", "PKHNXT0M3ZBTEKBEH1LM");
-            request.AddHeader("APCA-API-SECRET-KEY", "3EjNkXEQt7s4WceVGdmPslJ6oYo65uIzfHE09yPS");
+            request.AddHeader("APCA-API-KEY-ID", "removed");
+            request.AddHeader("APCA-API-SECRET-KEY", "removed");
             request.AddHeader("Content-Type", "text/plain");
             request.AddParameter("text/plain", "{\r\n    \"symbol\": \""+ stockListing +"\",\r\n    \"qty\": "+ quantity + ",\r\n    \"side\": \"buy\",\r\n    \"type\": \"market\",\r\n    \"time_in_force\": \"day\"\r\n}", ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
