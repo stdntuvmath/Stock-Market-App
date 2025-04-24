@@ -25,8 +25,8 @@ namespace Stock_Paper_Trading_App
         private static string CurrentEquityFile = @"C:\Users\" + windowsUserName + @"\Documents\Paper Trader\CurrentEquity.txt";
         private static string CurrentCashFile = @"C:\Users\" + windowsUserName + @"\Documents\Paper Trader\CurrentCashMade.txt";
 
-        private static string API_KEY = "PKHNXT0M3ZBTEKBEH1LM";
-        private static string API_SECRET_KEY = "3EjNkXEQt7s4WceVGdmPslJ6oYo65uIzfHE09yPS";
+        private static string API_KEY = "removed";
+        private static string API_SECRET_KEY = "removed";
         private static bool toggleCancel = false;
         private static string WithdrawlableCash;
 
