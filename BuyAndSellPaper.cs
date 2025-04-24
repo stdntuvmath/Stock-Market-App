@@ -11,8 +11,8 @@ namespace Stock_Trading_App
 {
     internal static class BuyAndSellPaper
     {
-        private static string API_KEY = "PKHNXT0M3ZBTEKBEH1LM";
-        private static string API_SECRET_KEY = "3EjNkXEQt7s4WceVGdmPslJ6oYo65uIzfHE09yPS";
+        private static string API_KEY = "removed";
+        private static string API_SECRET_KEY = "removed";
 
         private static bool ToggleCancel = false;
         private static bool OKtoBuy = true;
