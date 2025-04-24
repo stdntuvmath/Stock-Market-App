@@ -12,8 +12,8 @@ namespace Stock_Trading_App
 {
     internal class GetStockCurrentValue
     {
-        private static string API_KEY = "PKHNXT0M3ZBTEKBEH1LM";
-        private static string API_SECRET_KEY = "3EjNkXEQt7s4WceVGdmPslJ6oYo65uIzfHE09yPS";
+        private static string API_KEY = "removed";
+        private static string API_SECRET_KEY = "removed";
 
         private static string windowsUserName = System.Environment.UserName;//gives windows username
         private static string hiddenPSVFile = @"C:\Users\" + windowsUserName + @"\Documents\Current Value.psv";
